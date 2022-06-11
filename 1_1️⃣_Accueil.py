@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 # from streamlit_folium import st_folium
-# import folium
+import folium
 
 st.set_page_config(
     page_title="SNT",
@@ -43,3 +43,14 @@ st.code(
 
     """
 )
+
+duez = folium.Map(location=[50.17343343722581,
+                            3.242331203107551], zoom_start=19)
+
+folium.Marker(location=[50.17343343722581, 3.242331203107551],
+              popup="Lycée Paul Duez de Cambrai",
+              tooltip="Lycée Paul Duez de Cambrai"
+
+              ).add_to(duez)
+
+duez
