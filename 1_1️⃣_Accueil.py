@@ -45,7 +45,7 @@ st.code(
 )
 
 
-// duez = folium.Map(location=[50.17343343722581,
+"""duez = folium.Map(location=[50.17343343722581,
                             3.242331203107551], zoom_start=19)
 
 folium.Marker(location=[50.17343343722581, 3.242331203107551],
@@ -54,4 +54,4 @@ folium.Marker(location=[50.17343343722581, 3.242331203107551],
 
               ).add_to(duez)
 
-data = st_folium(duez, width=800)
+data = st_folium(duez, width=800)"""
