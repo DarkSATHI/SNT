@@ -5,5 +5,5 @@ image = Image.open('./assets/snt.png')
 
 st.image(image, width=250, caption='https://wall.alphacoders.com/')
 
-st.title("# Web 📱")
+st.title("Web 📱")
 st.sidebar.markdown("# Web 📱")
