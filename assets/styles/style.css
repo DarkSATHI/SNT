@@ -1,0 +1,119 @@
+
+        .lien a, .sidenav li a {
+            color: white;
+            text-shadow: 2px 2px 1px grey;
+            font-family: teacher;
+
+        }
+
+        [v-cloak]{
+            display: none
+        }
+
+        .suivre{
+            display: block;
+            color:rgba(46, 108, 233, 1);
+            font-weight: bold;
+            margin: 10px;
+            height:40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+        }
+
+        .lien a:hover, .sidenav li:not(.codeduez) a:hover{
+            text-decoration: underline red;
+            text-shadow: none;
+            font-size: 16px;
+            color: red;
+        }
+
+        #duez2{
+            width:100%;
+        }
+
+        .sidenav{
+            background-image: linear-gradient(to right, rgb(118, 208, 238), rgba(118, 208, 238, 0.2));
+        }
+
+        body{
+            background-image: linear-gradient(to right, rgb(118, 208, 238), rgba(118, 208, 238, 0.2));
+        }
+
+        .codeduez a, .sidenav .codeduez a {
+            color: rgba(46, 108, 233, 1);
+            text-shadow: 2px 2px 1px grey;
+            font-family: teacher;
+            font-size: 25px;
+        }
+
+        #present, #present-reveal {
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 1px grey;
+        }
+
+        #present-reveal+p{
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .container {
+            margin-top: 5vw;
+            width: 70vw;
+        }
+
+        .card {
+            width: 70vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5vw;
+        }
+
+        @font-face {
+            font-family: "teacher";
+            src: url(../fonts/Teacher_a.TTF);
+        }
+
+        .brand-logo img{
+            width:45%;
+        }
+
+        .background img {
+            display: block;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media only screen and (max-width: 990px) {
+            .card {
+                width: 100vw;
+                margin-top: 8vw;
+            }
+
+            .container {
+                margin-top: 5vw;
+                width: 100vw;
+            }
+
+            #present-reveal+p,  #present-reveal{
+                color: white;
+                font-weight: bold;
+                font-size: 3vw;
+            }
+
+            .brand-logo img{
+                width:35%;
+            }
+        }
+
+        @media screen and (min-width: 1500px) {
+            .card {
+                width: 40vw;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3vw;
+            }
+        }
