@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <title>CodeDuez</title>
+</head>
+
+<body>
+    <div class="container" id="app" v-cloak>
+        <nav>
+            <div class="nav-wrapper cyan lighten-1">
+                <a href="#" class="brand-logo right"><img src="assets/images/codeduez.png" alt=""></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger btn-flobting pulse"><i
+                        class="material-icons">more_horiz</i></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="codeduez" @click="sideClose(0)"><a href="#">
+                            <span style="color:red">Code</span>Duez
+                        </a></li>
+                    <li class="lien" v-for="i in tableProjets"><a href="#" @click="sideClose(i)">{{i==1?"Projet":""}}
+                            {{i}}</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <div class="background">
+                <img src="assets/images/duez.png" alt="" id="duez2">
+            </div>
+            <li class="codeduez" @click="sideClose(0)"><a href="#">
+                    <span style="color:red">Code</span>Duez
+                </a></li>
+            <li v-for="i in tableProjets"><a href="#" @click="sideClose(i)">Projet {{i}}</a></li>
+        </ul>
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" :src="projets[choix].image[0]" alt="duezLogo">
+            </div>
+            <div class="card-content cyan lighten-1">
+                <a class="card-title activator" id="present">{{projets[choix].titre}} &#8594;<i
+                        class="material-icons right">expand_less</i></a>
+
+            </div>
+            <div class="card-reveal cyan lighten-1" id="cardPresentation">
+                <div class="card-title" id="present-reveal">{{projets[choix].titre}}<i
+                        class="material-icons right">expand_more</i></div>
+                <p>{{projets[choix].texte}}</p>
+                <div class="background">
+                    <img :src="projets[choix].image[1]" alt="">
+                </div>
+
+                <a class="suivre" v-for="(lien, texte, item) in projets[choix].liens" :key="item" :href="lien"
+                    target="_blank">{{texte}}</a><br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
